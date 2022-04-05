@@ -1,16 +1,75 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-Br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="static/style.css">
-    <title>{{ titulo }}</title>
+    <title>Layout</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-<h1><marquee>Alterandop o Flask! :D</marquee></h1>
+
+<!-- CONTAINER -->
+<div class="container mx-auto">
+
+    <!-- LOGO+NAVBAR -->
+
+    <div class="navbar flex m-2 text-green-800 font-bold	">
+
+        <div class="logotipo m-2">
+            <a href="http://127.0.0.1:5000">Home</a>
+        </div>
+
+        <div class="navigation-itens m-2">
+            <ul class="flex ">
+                <li class="mx-2">
+                    <a class="http://127.0.0.1:5000/sobre" href="http://127.0.0.1:5000/sobre">
+                        Sobre
+                    </a>
+                </li>
+                <li class="mx-2">
+                    <a class="" href="http://127.0.0.1:5000/funcionalidades">
+                        Funcionalidades
+                    </a>
+                </li>
+                <li class="mx-2">
+                    <a class="" href="http://127.0.0.1:5000/blog">
+                        Blog
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="m-2">
+            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+
+        <div class="m-2">
+            <a href="#"><i class="fa-solid fa-toggle-off"></i></a>
+        </div>
+
+        <div class="m-2">
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+        </div>
+
+    </div>
+
+    <!-- ASIDE -->
+
+    <aside class=""></aside>
+
+    <!-- CONTENT / MAIN -->
+    {% block content %}{% endblock %}
+
+
+    <!-- FOOTER -->
+    <footer class="">
+        <small>Desenvolvido por grupo de Estudantes da Univesp - 2022</small>
+    </footer>
+
+</div>
 
 </body>
+
 </html>
